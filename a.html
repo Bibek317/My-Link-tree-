@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>My Linktree</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    transition: background 1s ease-in-out; /* Smooth transition for freezing effect */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    overflow: hidden;
+    border: 4px dashed transparent;
+    animation: pixelBorder 2s linear infinite;
+}
+
+@keyframes pixelBorder {
+    0% { border-color: #ff6b6b; }
+    25% { border-color: #4ecdc4; }
+    50% { border-color: #45b7d1; }
+    75% { border-color: #96f2d7; }
+    100% { border-color: #ff6b6b; }
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile-pic:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 0.9; transform: translateY(0); }
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    position: relative;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Default button hover effect */
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Glow effect when clicked */
+.btn:active {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Unique glow effect on click for each button */
+.btn:nth-child(1):active { box-shadow: 0 0 20px #6cc644; } /* GitHub */
+.btn:nth-child(2):active { box-shadow: 0 0 20px #e1306c; } /* Instagram */
+.btn:nth-child(3):active { box-shadow: 0 0 20px #1da1f2; } /* Twitter */
+.btn:nth-child(4):active { box-shadow: 0 0 20px #ff5722; } /* Blogger */
+.btn:nth-child(5):active { box-shadow: 0 0 20px #ff0000; } /* YouTube */</style></head> 
+ <body> 
+  <div class="container"> 
+   <img src="https://i.ibb.co/WWfcRXnB/1733903461943-jpg-Wed-Dec-11-13-36-01-GMT-05-45-2024.jpg" alt="Profile Picture" class="profile-pic"> 
+   <h1>Bibek Kushwaha</h1> 
+   <p class="typing">Beginner in Coding 🚀 Welcome to my digital hub!</p> 
+   <div class="links"> <a href="https://github.com/Bibek317" target="_blank" class="btn"> <i class="fa-brands fa-github"></i> GitHub </a> <a href="https://www.instagram.com/bibek_719?igsh=ZTA2ejFvNTIxaDRx" target="_blank" class="btn"> <i class="fa-brands fa-instagram"></i> Instagram </a> <a href="https://x.com/BibekKu98174176?t=5OyY9xIU1sq_Hlz7_BeS7A&amp;s=09" target="_blank" class="btn"> <i class="fa-brands fa-twitter"></i> Twitter </a> <a href="https://bibek719.blogspot.com" target="_blank" class="btn"> <i class="fa-brands fa-blogger"></i> Blogger </a> <a href="https://youtube.com/@bibek_719?si=2-nqrMTdYqg4Z7F0" target="_blank" class="btn"> <i class="fa-brands fa-youtube"></i> YouTube </a> 
+   </div> 
+  </div> 
+ 
+<script type="text/javascript" id="dcoder_script">document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // Stop background animation
+        document.body.style.animation = 'none';
+        
+        // Capture the current background color
+        let computedStyle = window.getComputedStyle(document.body);
+        let currentBackground = computedStyle.background;
+        
+        // Apply the final color as a fixed background
+        document.body.style.background = currentBackground;
+    });
+});</script></body></html>
